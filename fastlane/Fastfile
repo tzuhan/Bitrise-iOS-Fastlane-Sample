@@ -4,6 +4,7 @@ platform :ios do
 
   desc "Test"
   lane :tests do
+    sh("curl", "-o", '/tmp/asc_key.json', "ENV['BITRISEIO_test_file_URL']")
     scan
   end
 
